@@ -9,19 +9,13 @@ export default function Home() {
   const [amount, setAmount] = useState<any>(null);
   const [openAmount, setOpenAmount] = useState(false);
   const [wallet, setWallet] = useState("");
-  const [validWallet, setValidWallet] = useState(false);
+  const [validWallet, setValidWallet] = useState(true);
   const [loading, setLoading] = useState(false);
   const [signature, setSignature] = useState(
     null
   );
   const [showVerdict, setShowVerdict] = useState(false);
   const [error, setError] = useState<any>(null);
-
-  const validateWallet = (wallet: string) => {
-    // check if wallet is valid using regex
-    const regex = /^[a-zA-Z0-9]{44}$/;
-    setValidWallet(regex.test(wallet));
-  };
 
   async function handleAirdrop() {
     setLoading(true);
@@ -46,10 +40,6 @@ export default function Home() {
     }
     setLoading(false);
   }
-
-  useEffect(() => {
-    validateWallet(wallet);
-  }, [wallet]);
 
   return (
     <main className="flex max-h-screen flex-col items-center justify-start p-24">
@@ -122,7 +112,7 @@ export default function Home() {
           <div className="mt-7">
             <button
               onClick={handleAirdrop}
-              disabled={!validWallet || !amount || loading}
+              disabled={!wallet || !amount || loading}
               className="w-full h-min disabled:bg-[#877D8B] bg-[#E3D7E4] text-black text-sm font-medium rounded-lg py-[0.5rem] flex justify-center items-center gap-2"
             >
               {loading ? (
