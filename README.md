@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Solana Faucet
+A Solana Faucet that allows users to request test SOL tokens on the Solana Devnet or Testnet. This is useful for developers testing their smart contracts and decentralized applications (dApps) on Solana before deploying to the mainnet.
 
-## Getting Started
+## 🌟 Features
+- 🔹 Dispenses free SOL on the Solana Devnet/Testnet.
+- 🔹 Built using Next.js for a fast and efficient UI.
+- 🔹 Simple wallet integration using Solana's Web3.js.
+- 🔹 Secure request handling to prevent abuse.
 
-First, run the development server:
+## ⚡ Prerequisites
+Before running this project, ensure you have the following installed:
 
+- Node.js (v16 or later)
+- Yarn or npm
+- Solana CLI (for interacting with the Solana blockchain)
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/sameergupta4873/Solana-Faucet.git
+cd Solana-Faucet
+```
+
+### 2️⃣ Install Dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3️⃣ Start the Development Server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 4️⃣ Open in Browser
+Visit [http://localhost:3000](http://localhost:3000) to access the faucet UI.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 How It Works
+1. Connect your Solana wallet (e.g., Phantom, Solflare).
+2. Choose the network (Devnet or Testnet).
+3. Click "Request SOL" to receive free tokens for testing.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🎯 Deployment
+To deploy this project, use:
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 🛠 Built With
+- **Next.js** – Fast, modern React framework
+- **Solana Web3.js** – For blockchain interactions
+- **Tailwind CSS** – Responsive styling
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📝 License
+This project is **MIT Licensed**. Feel free to use, modify, and contribute!
